@@ -35,7 +35,7 @@ export default function EditDestination({ route, navigation }) {
     try {
       await updateDestination(id, { name, description, difficulty });
       Alert.alert('Éxito', 'Destino actualizado correctamente.');
-      navigation.goBack(); 
+      navigation.goBack();  // Regresar a la pantalla anterior
     } catch (error) {
       console.error('Error al actualizar destino:', error);
       Alert.alert('Error', 'No se pudo actualizar el destino.');

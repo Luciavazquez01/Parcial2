@@ -1,21 +1,22 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Destinations from './pages/Destinations';
 import AddDestination from './pages/AddDestination';
 import EditDestination from './pages/EditDestination';
+import DestinationList from './pages/DestinationList';
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Destinations">
+      <Stack.Navigator initialRouteName="DestinationList">
         <Stack.Screen
-          name="Destinations"
-          component={Destinations}
+          name="DestinationList"
+          component={DestinationList}
           options={{ title: 'Lista de Destinos' }}
         />
+        
         <Stack.Screen
           name="AddDestination"
           component={AddDestination}
